@@ -15,6 +15,8 @@ export const metadata = {
   },
   description:
     "Seaborne International is a maritime and offshore solutions provider specializing in Marine & Offshore services, resource management, technical support, drydocking and vessel Sale & Purchase (S&P).",
+  // Preview deployment: keep it out of search results. Remove when going live.
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({ children }) {

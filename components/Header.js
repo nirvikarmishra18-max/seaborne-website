@@ -7,7 +7,8 @@ import { nav } from "@/lib/content";
 import { Brand } from "./Graphics";
 
 export default function Header() {
-  const pathname = usePathname();
+  // trailingSlash export gives "/sales-services/"; nav hrefs have no slash.
+  const pathname = usePathname().replace(/(.)\/$/, "$1");
   const [open, setOpen] = useState(false);
 
   useEffect(() => setOpen(false), [pathname]);
